@@ -1,0 +1,17 @@
+/*Escreva um programa em C para calcular a soma de todos os divisores de 9 em um determinado intervalo definido pelo usuário.*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int n, soma;
+    printf("Insira um valor qualquer:\n");
+    scanf("%d", &n);
+    do {
+        soma = 9 + 3 + 1;
+        printf("A soma dos divisores de nove é: %d", soma);
+    } while(9%n==0);
+
+    return 0;
+}
