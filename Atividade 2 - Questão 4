@@ -1,0 +1,98 @@
+/*Escreva um programa em C que recebe um número do usuário de 1000 até 9999, separe seus dígitos e informe seus nomes em português.*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    /*Escreva um programa em C que recebe um número do usuário de 1000 até 9999, separe seus dígitos e informe seus nomes em português.*/
+    int num, milhar, centena, dezena, unidade;
+    printf("Digite um número entre 1000 e 9999: ");
+    scanf("%d", &num);
+    if (num < 1000||9999 < num){
+        printf("DIGITE UM VALOR VÁLIDO");
+    } else {
+    milhar = num/1000;
+    centena = (num/100)%10;
+    dezena = (num%100)/10;
+    unidade = (num%100)%10;
+    printf("\nNumero por extenso: ");
+
+    if(milhar==1)
+    printf(" um mil");
+    else if(milhar==2)
+    printf(" dois mil");
+    else if(milhar==3)
+    printf(" tres mil");
+    else if(milhar==4)
+    printf(" quatro mil");
+    else if(milhar==5)
+    printf(" cinco mil");
+    else if(milhar==6)
+    printf(" seis mil");
+    else if(milhar==7)
+    printf(" sete mil");
+    else if(milhar==8)
+    printf(" oito mil");
+    else if(milhar==9)
+    printf(" nove mil");
+
+    if(centena==1)
+    printf(", ceto");
+    else if(centena==2)
+    printf(", duzentos");
+    else if(centena==3)
+    printf(", trezentos");
+    else if(centena==4)
+    printf(", quatrocentos");
+    else if(centena==5)
+    printf(", quinhentos");
+    else if(centena==6)
+    printf(", seiscentos");
+    else if(centena==7)
+    printf(", setecentos");
+    else if(centena==8)
+    printf(", oitocentos");
+    else if(centena==9)
+    printf(", novecentos");
+
+    if(dezena==1)
+    printf(" e dez");
+    else if(dezena==2)
+    printf(" e vinte");
+    else if(dezena==3)
+    printf(" e trinta");
+    else if(dezena==4)
+    printf(" e quarenta");
+    else if(dezena==5)
+    printf(" e cinquenta");
+    else if(dezena==6)
+    printf(" e sessenta");
+    else if(dezena==7)
+    printf(" e setenta");
+    else if(dezena==8)
+    printf(" e oitenta");
+    else if(dezena==9)
+    printf(" e noventa");
+
+    if(unidade==1)
+    printf(" e um");
+    else if(unidade==2)
+    printf(" e dois");
+    else if(unidade==3)
+    printf(" e três");
+    else if(unidade==4)
+    printf(" e quatro");
+    else if(unidade==5)
+    printf(" e cinco");
+    else if(unidade==6)
+    printf(" e seis");
+    else if(unidade==7)
+    printf(" e sete");
+    else if(unidade==8)
+    printf(" e oito");
+    else if(unidade==9)
+    printf(" e nove");
+    }
+    return 0;
+}
