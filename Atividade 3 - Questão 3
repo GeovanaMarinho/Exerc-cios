@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+/*Faça um programa que leia dois vetores de 10 elementos. Crie um vetor que seja a intersecção entre os 2 vetores anteriores, ou seja,
+que contém apenas os números que estão em ambos os vetores. Não deve conter números repetidos.*/
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int valor_vet1[10], valor_vet2[10], inter[20], i;
+    printf("Digite 10 números: ");
+    for(i = 0; i < 10; i++){
+    scanf("%i", &valor_vet1[i]);
+    }
+    printf("Digite 10 números novamente: ");
+    for(i = 0; i < 10; i++){
+    scanf("%i", &valor_vet2[i]);
+}
+    printf("\nIntercessão: ");
+    for(int i=0; i < 10;i++){
+        for(int j=0;j < 10;j++){
+            if(valor_vet1[i] == valor_vet2[j]){
+                printf("%i, ", valor_vet1[i]);
+            }
+
+        }
+    }
+}
