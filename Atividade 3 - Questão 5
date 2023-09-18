@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+/*Escreva um programa que leia um número inteiro positivo n e em seguida imprima n linhas do chamado Triangulo de Pascal*/
+int main()
+{
+   setlocale(LC_ALL, "portuguese");
+   int i , j= 1, y, x, g;
+    printf("Digite um número: ");
+    scanf("%d", &g);
+
+    for(i = 0; i < g; i++){
+        for(x = 1; x <= g-i; x++)
+        for(y = 0; y<=i; y++){
+            if(y==0 || i==0)
+            j=1;
+            else
+                j=j*(i-y+1)/y;
+                printf("%d \n", j);
+            }
+           
+    };
+    return 0;
+}
