@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#define TAM 15
+/*Faça um programa que leia um vetor de 15 posições e o compacte, ou seja, elimine as posições com valor zero.
+Para isso, todos os elementos a frente do valor zero, devem ser movidos uma posição para trás no vetor*/
+
+int main ()
+{
+    setlocale(LC_ALL, "portuguese");
+    int i, num_vet[TAM];
+    for(i = 0; i < TAM; i++){
+        printf("Digite o valor da posição %d do vetor: ", i + 1);
+        scanf("%d", &num_vet[i]);
+    }
+    int x=0;
+    for(int y = 0; y < num_vet[TAM]; y++){
+        if(num_vet[y] == 0)
+            continue;
+
+        num_vet[x] = num_vet[y];
+        x++;
+    }
+    printf("\n");
+    for(i=0; i<x; i++)
+            printf("Vetor Final [%d] = %d\n",i+1,num_vet[i]);
+
+    }
+
