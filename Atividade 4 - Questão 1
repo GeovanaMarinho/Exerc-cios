@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+/*Leia um vetor com 10 números reais, ordene os elementos deste vetor, e no final escreva os elementos do vetor ordenado*/
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int num_vet[10], aux, j, g, i;
+    printf("Digite 10 números: \n") ;
+    for( i = 0; i < 10; i++){
+       scanf("%i", &num_vet[i]);
+       num_vet[i] = num_vet[i];
+    }
+    for(j = 0; j < 10; j++){
+        for(int g = j; g <10; g++){
+            if(num_vet[j] > num_vet[g]){
+                aux = num_vet[j];
+                num_vet[j] = num_vet[g];
+                num_vet[g] = aux;
+        }
+        }
+    }
+    printf("\nOrganização do vetor: ");
+    for(i = 0; i < 10; i++){
+        printf(" %i, ", num_vet[i]);
+    }
+
+    return 0;
+}
