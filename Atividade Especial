@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*Crie um programa em C que multiplique duas matrizes 3x3. Não utilize chatgpt ou copie da internet, crie sua própria solução, mesmo que incorreta
+você aprenderá mais.*/
+int main(void)
+{
+    int i, g; //y;
+    //i linha
+    //g coluna
+    int matriz1[3][3];
+    int matriz2[3][3];
+    int matrizAuxiliar[3][3];
+    for (i=1; i<=3; i++){
+        for (g=1; g<=3; g++){
+            printf("Primeira matriz. Digite o valor da linha[%d] coluna[%d]\n", i, g);
+            scanf("%d", &matriz1[i][g]);
+        }
+    }
+    printf("\n");
+    for (i=1; i<=3; i++){
+        for (g=1; g<=3; g++){
+            printf("Segunda matriz. Digite o valor da linha[%d] coluna[%d]\n", i, g);
+            scanf("%d", &matriz2[i][g]);
+        }
+    }
+
+    printf("\n");
+    printf("Linha, coluna = valor\n");
+    for (i=1; i<=3; i++){
+        for (g=1; g<=3; g++){
+            matrizAuxiliar[i][g] + matriz1[i][g]*matriz2[i][g];
+            printf("linha[&d] coluna[%d] = %d\n", i, g, matrizAuxiliar);
+        }
+    }
+    printf("\n");
+    return 0;
+}
